@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Orders Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Orders</h1>
+</div>
+
+<app-root></app-root>
+
+@foreach (var scriptFileName in Model)
+{
+    <script src="~/client/@scriptFileName"></script>
+}

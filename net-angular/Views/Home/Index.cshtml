@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<app-root></app-root>
+
+@* @section Scripts {
+    <script src="~/client/runtime.cf3b0918b24a2191.js" asp-append-version="true"></script>
+    <script src="~/client/polyfills.a53da50d8f95720f.js" asp-append-version="true"></script>
+    <script src="~/client/main.980b5413be653d62.js" asp-append-version="true"></script>
+} *@
+
+@foreach (var scriptFileName in Model)
+{
+    <script src="~/client/@scriptFileName"></script>
+}
